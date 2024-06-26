@@ -1,7 +1,8 @@
 import './App.css'
-import { Button } from './emotion-components/Button'
+import { BigButton, Button } from './emotion-components/Button'
 import { Container } from './emotion-components/Container'
 import { Layout } from './emotion-components/Layout'
+import { ReactButton } from './react-components/Button'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <>
       <Container>
         <Layout>
-          <Button>button</Button>
+          <BigButton>BigButton</BigButton>
+          <Button>Button</Button>
         </Layout>
       </Container>
     </>

@@ -8,8 +8,23 @@ export const Button = styled.div`
     color: black;
     font-weight: bold;
     cursor:pointer;
+    transition: 1s;
 
     &:hover {
       color: white;
+    }
+`
+
+export const BigButton = styled.div`
+    padding: 64px;
+    background-color: hotpink;
+    font-size: 24px;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    cursor:pointer;
+    transition: 1s;
+    &:hover {
+        color: white;
     }
 `
