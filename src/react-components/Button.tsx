@@ -1,47 +1,34 @@
 import { css } from '@emotion/react'
 
-interface ButtonProps {
-    children?: React.ReactNode,
-    theme?: 'primary' | 'secondary';
-    onClick?: () => void;
+const color = 'white'
+
+interface props {
+    onClick: () => void
+    objtype: 'primary' | 'warning'
+    content: string
 }
 
-export const ReactButton = ({ children, theme, onClick }: ButtonProps) => {
 
+const obj = {
+    primary: 'blue',
+    warning: 'red'
+}
+
+
+export const ReactButton = ({ onClick, objtype, content }: props) => {
     return (
-        <>
-            <div>test</div>
-        </>
+        <div css={css`
+            padding: 32px;
+            background-color: ${obj[objtype]};
+            font-size: 24px;
+            border-radius: 4px;
+            &:hover {
+                color: ${color};
+            }
+            `}
+            onClick={onClick}
+        >
+            {content}
+        </div>
     )
 }
-
-const style = (css`
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s;
-`)
-
-const themes = {
-    primary: css`
-      background-color: palevioletred;
-      color: white;
-      
-      &:hover {
-        background-color: darkviolet;
-      }
-    `,
-    secondary: css`
-      background-color: white;
-      color: palevioletred;
-      border: 1px solid palevioletred;
-      
-      &:hover {
-        background-color: palevioletred;
-        color: white;
-      }
-    `,
-};

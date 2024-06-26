@@ -7,12 +7,16 @@ import { ReactButton } from './react-components/Button'
 
 function App() {
 
+  const onClick = () => {
+    alert('button is clicked');
+  }
   return (
     <>
       <Container>
         <Layout>
           <BigButton>BigButton</BigButton>
-          <Button>Button</Button>
+          <Button onClick={onClick}>Button</Button>
+          <ReactButton onClick={onClick} objtype='primary' content='hello'></ReactButton>
         </Layout>
       </Container>
     </>
